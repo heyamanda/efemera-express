@@ -23,6 +23,32 @@ const homeController = {
             listaServicos: servicos,
             listaBanners: banners
         });
+    },
+    contato: (req, res) => {
+        let {
+            nome,
+            email,
+            mensagem
+        } = req.body;
+
+        res.render('contato', {
+            nome,
+            email,
+            mensagem,
+            title: 'Contato'
+        });
+    },
+    newsletter: (req, res) => {
+        let {
+            nome,
+            email
+        } = req.body;
+
+        res.render('newsletter', {
+            nome,
+            email,
+            title: 'Newslettter'
+        });
     }
 };
 
